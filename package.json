@@ -1,17 +1,25 @@
 {
   "name": "product-info",
   "version": "0.0.1",
-  "description": "Extracts product information from web pages",
-  "keywords": ["product","price","scrape","schema.org"],
-  "author": "Ben Magyar <magyar@american.edu>",
+  "description": "Product Info Extractor",
+  "keywords": [
+    "product",
+    "price",
+    "scrape",
+    "schema.org"
+  ],
+  "author": "Dasith Kuruppu <dasithkuruppu@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/BenMagyar/product-info.git"
+    "url": "git://github.com/DasithKuruppu/product-info"
+  },
+  "scripts": {
+    "test": "/nodemocha tests/generic.test.js"
   },
   "dependencies": {
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.20.0",
     "jquery": "^2.1.3",
-    "jsdom": "^3.1.2",
+    "jsdom": "^9.4.2",
     "request": "^2.53.0",
     "url-regexp": "^1.0.2"
   },
