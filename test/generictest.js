@@ -9,6 +9,6 @@ scrapper=require("../index");
         '  </body>' +
         '</html>';
      
-scrapper.parse('http://www.gadgetsonline.co.nz/gadget2680-Samsung%20Galaxy%20Note%204%20SM-N910%2032GB%20Black.html',function(err,product){
+scrapper.parse('http://www.gadgetsonline.co.nz/gadget3657-Motorola%20Moto%20G4%20Plus%2016GB%20Dual%20Sim%20-%20Black.html',function(err,product){
     console.dir(product);
 })
