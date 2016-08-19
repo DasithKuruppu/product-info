@@ -1,4 +1,5 @@
-scrapper=require("../index");
+var scrapper=require("../index");
+var shema =require('../lib/Schema/mobilephones');
     var HTML = '' +
         '<html>' +
         '  <head>' +
@@ -8,7 +9,8 @@ scrapper=require("../index");
         '    <h1>Blue Shirt</h1>' +
         '  </body>' +
         '</html>';
+var x=shema.product;
      
-scrapper.parse('http://www.gadgetsonline.co.nz/gadget3657-Motorola%20Moto%20G4%20Plus%2016GB%20Dual%20Sim%20-%20Black.html',function(err,product){
+scrapper.parse('http://www.gsmarena.com/lenovo_vibe_c2-8193.php',shema.product,function(err,product){
     console.dir(product);
 })
