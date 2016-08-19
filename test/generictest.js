@@ -12,5 +12,27 @@ var shema =require('../lib/Schema/mobilephones');
 var x=shema.product;
      
 scrapper.parse('http://www.gsmarena.com/lenovo_vibe_c2-8193.php',shema.product,function(err,product){
+    var retobj={}
+    product.Features.map(function(section){
+        var stripsection=section[0];
+        
+        var subobj={};
+        stripsection.forEach(function(curr){
+            
+            
+            
+            var currobjkey=Object.keys(curr)[1];
+            var currkeynext=Object.keys(curr)[0]
+
+            subobj[curr[currobjkey]]=curr[currkeynext];
+            
+            retobj[currobjkey]=subobj;
+            
+        })   
+
+    product.Features=retobj;
+        
+    });
+        
     console.dir(product);
 })
